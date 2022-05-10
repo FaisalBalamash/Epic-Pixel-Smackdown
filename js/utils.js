@@ -14,11 +14,11 @@ function determineWinner({ player, enemy, timerId }) {
   clearTimeout(timerId)
   document.querySelector('#displayText').style.display = 'flex'
   if (player.health === enemy.health) {
-    document.querySelector('#displayText').innerHTML = 'تعادل'
+    document.querySelector('#displayText').innerHTML = 'Tie'
   } else if (player.health > enemy.health) {
-    document.querySelector('#displayText').innerHTML = 'اللاعب 1 فاز'
+    document.querySelector('#displayText').innerHTML = 'Player 1 Wins'
   } else if (player.health < enemy.health) {
-    document.querySelector('#displayText').innerHTML = 'اللاعب 2 فاز'
+    document.querySelector('#displayText').innerHTML = 'Player 2 Wins'
   }
 }
 

@@ -18,7 +18,7 @@ const background = new Sprite({
 
 const player = new Fighter({
   position: {
-    x: 0,
+    x: 100,
     y: 0
   },
   velocity: {
@@ -34,7 +34,7 @@ const player = new Fighter({
   scale: 2.5,
   offset: {
     x: 215,
-    y: 157
+    y: 110
   },
   sprites: {
     idle: {
@@ -78,8 +78,8 @@ const player = new Fighter({
 
 const enemy = new Fighter({
   position: {
-    x: 400,
-    y: 100
+    x: 800,
+    y: 0,
   },
   velocity: {
     x: 0,
@@ -95,7 +95,7 @@ const enemy = new Fighter({
   scale: 2.5,
   offset: {
     x: 215,
-    y: 167
+    y: 120
   },
   sprites: {
     idle: {
