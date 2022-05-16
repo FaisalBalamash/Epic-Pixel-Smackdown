@@ -16,6 +16,16 @@ const background = new Sprite({
   imageSrc: './img/background.png'
 })
 
+const audiance = new Sprite({
+  position: {
+    x: 555,
+    y: 36
+  },
+  imageSrc: './img/audiance.png',
+  scale: 2,
+  framesMax: 6
+})
+
 const player = new Fighter({
   position: {
     x: 100,
@@ -161,6 +171,7 @@ function animate() {
   c.fillStyle = 'black'
   c.fillRect(0, 0, canvas.width, canvas.height)
   background.update()
+  audiance.update()
   c.fillStyle = 'rgba(255, 255, 255, 0.15)'
   c.fillRect(0, 0, canvas.width, canvas.height)
   player.update()
@@ -270,9 +281,15 @@ window.addEventListener('keydown', (event) => {
         player.lastKey = 'a'
         break
       case 'w':
+        var audio1 = new Audio("./audio/jump.mp3");
+        audio1.volume = 0.5;
+        audio1.play();
         player.velocity.y = -20
         break
       case ' ':
+        var audio2 = new Audio("./audio/attack.mp3");
+        audio2.volume = 0.5;
+        audio2.play();
         player.attack()
         break
     }
@@ -289,9 +306,15 @@ window.addEventListener('keydown', (event) => {
         enemy.lastKey = 'ArrowLeft'
         break
       case 'ArrowUp':
+        var audio3 = new Audio("./audio/jump.mp3");
+        audio3.volume = 0.5;
+        audio3.play();
         enemy.velocity.y = -20
         break
       case 'ArrowDown':
+        var audio4 = new Audio("./audio/attack.mp3");
+        audio4.volume = 0.5;
+        audio4.play();
         enemy.attack()
 
         break
