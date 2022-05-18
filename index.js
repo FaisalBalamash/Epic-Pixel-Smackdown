@@ -274,6 +274,9 @@ function animate() {
   }
 }
 
+var footstepsaudio = new Audio("./audio/footsteps.mp3");
+footstepsaudio.volume = 0.5;
+
 animate()
 
 window.addEventListener('keydown', (event) => {
@@ -282,10 +285,12 @@ window.addEventListener('keydown', (event) => {
       case 'd':
         keys.d.pressed = true
         player.lastKey = 'd'
+        footstepsaudio.play();
         break
       case 'a':
         keys.a.pressed = true
         player.lastKey = 'a'
+        footstepsaudio.play();
         break
       case 'w':
         var audio1 = new Audio("./audio/jump.mp3");
@@ -307,10 +312,12 @@ window.addEventListener('keydown', (event) => {
       case 'ArrowRight':
         keys.ArrowRight.pressed = true
         enemy.lastKey = 'ArrowRight'
+        footstepsaudio.play();
         break
       case 'ArrowLeft':
         keys.ArrowLeft.pressed = true
         enemy.lastKey = 'ArrowLeft'
+        footstepsaudio.play();
         break
       case 'ArrowUp':
         var audio3 = new Audio("./audio/jump.mp3");
@@ -333,9 +340,11 @@ window.addEventListener('keyup', (event) => {
   switch (event.key.toLowerCase()) {
     case 'd':
       keys.d.pressed = false
+      footstepsaudio.pause();
       break
     case 'a':
       keys.a.pressed = false
+      footstepsaudio.pause();
       break
   }
 
@@ -343,9 +352,11 @@ window.addEventListener('keyup', (event) => {
   switch (event.key) {
     case 'ArrowRight':
       keys.ArrowRight.pressed = false
+      footstepsaudio.pause();
       break
     case 'ArrowLeft':
       keys.ArrowLeft.pressed = false
+      footstepsaudio.pause();
       break
   }
 })
