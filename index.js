@@ -270,7 +270,6 @@ function animate() {
     determineWinner({ player, enemy, timerId 
     })
     backgroundaudio.pause()
-    backgroundaudio.currentTime = 0;
   }
 }
 
@@ -296,12 +295,14 @@ window.addEventListener('keydown', (event) => {
         var audio1 = new Audio("./audio/jump.mp3");
         audio1.volume = 0.5;
         audio1.play();
+        footstepsaudio.pause();
         player.velocity.y = -20
         break
       case ' ':
         var audio2 = new Audio("./audio/attack.mp3");
         audio2.volume = 0.5;
         audio2.play();
+        footstepsaudio.pause();
         player.attack()
         break
     }
@@ -323,12 +324,14 @@ window.addEventListener('keydown', (event) => {
         var audio3 = new Audio("./audio/jump.mp3");
         audio3.volume = 0.5;
         audio3.play();
+        footstepsaudio.pause();
         enemy.velocity.y = -20
         break
       case 'ArrowDown':
         var audio4 = new Audio("./audio/attack.mp3");
         audio4.volume = 0.5;
         audio4.play();
+        footstepsaudio.pause();
         enemy.attack()
 
         break
