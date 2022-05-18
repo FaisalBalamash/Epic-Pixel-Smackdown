@@ -8,6 +8,10 @@ c.fillRect(0, 0, canvas.width, canvas.height)
 
 const gravity = 0.7
 
+var backgroundaudio = new Audio("./audio/background.wav");
+backgroundaudio.volume = 0.02
+backgroundaudio.play();
+
 const background = new Sprite({
   position: {
     x: 0,
@@ -263,7 +267,10 @@ function animate() {
 
   // end game based on health
   if (enemy.health <= 0 || player.health <= 0) {
-    determineWinner({ player, enemy, timerId })
+    determineWinner({ player, enemy, timerId 
+    })
+    backgroundaudio.pause()
+    backgroundaudio.currentTime = 0;
   }
 }
 
