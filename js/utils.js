@@ -20,6 +20,7 @@ function determineWinner({ player, enemy, timerId }) {
   } else if (player.health < enemy.health) {
     document.querySelector('#displayText').innerHTML = 'اللاعب الثاني فاز'
   }
+    setTimeout("location.reload(true);",5000);
 }
 
 let timer = 60
