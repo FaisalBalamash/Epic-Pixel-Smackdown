@@ -14,7 +14,7 @@ Before you can run the game, you need a web browser that supports HTML5 and Java
 
 1. Clone this repository to your local machine or download the ZIP file.
 
-    git clone https://github.com/your-username/fighting-game.git
+    git clone https://github.com/FaisalBalamash/Epic-Pixel-Smackdown.git
 
 2.  Open the `index.html` file in your preferred web browser.
 
